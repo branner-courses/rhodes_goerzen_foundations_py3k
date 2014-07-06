@@ -1,5 +1,6 @@
 #! /usr/bin/env python
-# Rhodes and Goerzen, Foundations of Python Network Programming, udp_remote.py
+# Rhodes and Goerzen, Foundations of Python Network Programming - Chapter 2
+# udp_remote.py
 # UDP client and server for talking over the network
 # Converted to Python3 by David Branner, 20140629, works.
 
