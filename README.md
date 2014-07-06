@@ -4,7 +4,7 @@ Python 3 versions of code from Brandon Rhodes and John Goerzen's _Foundations of
 
 ### Current contents:
 
- * Listing 2–4. `udp_broadcast.py`: UDP Broadcast`tcp_sixteen.py`: Listing 3–1. Simple TCP Server and Client
+ * Listing 2–4. `udp_broadcast.py`: UDP Broadcast
  * Listing 3–1. `tcp_sixteen.py`: Simple TCP Server and Client
  * Listing 3–2. `tcp_deadlock.py`: TCP Server and Client That Deadlock
  * Listing 4–1. `www_ping.py`: Using `getaddrinfo()` to Create and Connect a Socket
