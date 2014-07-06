@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Rhodes and Goerzen, Foundations of Python Network Programming - Chapter 4 - 
+# Rhodes and Goerzen, Foundations of Python Network Programming - Chapter 4
 # forward_reverse.py
 # Checking whether a hostname works both forward and backward.
 # Converted to Python3 by David Branner, 20140706, works.
