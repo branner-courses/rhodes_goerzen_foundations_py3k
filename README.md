@@ -14,7 +14,9 @@ Python 3 versions of code from Brandon Rhodes and John Goerzen's _Foundations of
  * Listing 4–2.`forward_reverse.py`:  Confirming a Forward Lookup with a Reverse Lookup
  * Listing 4–3.`dns_basic.py`:  A Simple DNS Query Doing Its Own Recursion
  * Listing 4–4. `dns_mx.py`: Resolving an E-mail Domain Name
+
  ----
+
  * Listing 9–1. `verbose_handler.py`: An HTTP Request and Response that Prints All Headers
 
 [end]
