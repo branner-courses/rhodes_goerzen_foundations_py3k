@@ -4,6 +4,9 @@ Python 3 versions of code from Brandon Rhodes and John Goerzen's _Foundations of
 
 ### Current contents:
 
+ * Listing 2–1. `udp_local.py`: UDP Server and Client on the Loopback Interface
+ * Listing 2–2. `udp_remote.py`: UDP Server and Client on Different Machines
+ * Listing 2–3. `big_sender.py`: Sending a Very Large UDP Packet (**note**: This program does not work as written on Mac OS 10.9.4; `IN.IP_MTU_DISCOVER` is not found in Python 3 on this system.)
  * Listing 2–4. `udp_broadcast.py`: UDP Broadcast
  * Listing 3–1. `tcp_sixteen.py`: Simple TCP Server and Client
  * Listing 3–2. `tcp_deadlock.py`: TCP Server and Client That Deadlock
