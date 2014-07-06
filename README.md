@@ -4,14 +4,14 @@ Python 3 versions of code from Brandon Rhodes and John Goerzen's _Foundations of
 
 ### Current contents:
 
- * `udp_broadcast.py`: Listing 2–4. UDP Broadcast`tcp_sixteen.py`: Listing 3–1. Simple TCP Server and Client
- * `tcp_sixteen.py`: Listing 3–1. Simple TCP Server and Client
- * `tcp_deadlock.py`: Listing 3–2. TCP Server and Client That Deadlock
- * `www_ping.py`: Listing 4–1. Using `getaddrinfo()` to Create and Connect a Socket
- * `forward_reverse.py`: Listing 4–2. Confirming a Forward Lookup with a Reverse Lookup
- * `dns_basic.py`: Listing 4–3. A Simple DNS Query Doing Its Own Recursion
- * `dns_mx.py`: Listing 4–4. Resolving an E-mail Domain Name
+ * Listing 2–4. `udp_broadcast.py`: UDP Broadcast`tcp_sixteen.py`: Listing 3–1. Simple TCP Server and Client
+ * Listing 3–1. `tcp_sixteen.py`: Simple TCP Server and Client
+ * Listing 3–2. `tcp_deadlock.py`: TCP Server and Client That Deadlock
+ * Listing 4–1. `www_ping.py`: Using `getaddrinfo()` to Create and Connect a Socket
+ * Listing 4–2.`forward_reverse.py`:  Confirming a Forward Lookup with a Reverse Lookup
+ * Listing 4–3.`dns_basic.py`:  A Simple DNS Query Doing Its Own Recursion
+ * Listing 4–4. `dns_mx.py`: Resolving an E-mail Domain Name
  ----
- * `verbose_handler.py`: Listing 9–1. An HTTP Request and Response that Prints All Headers
+ * Listing 9–1. `verbose_handler.py`: An HTTP Request and Response that Prints All Headers
 
 [end]
