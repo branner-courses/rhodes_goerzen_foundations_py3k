@@ -25,7 +25,7 @@ Python 3 versions of code from Brandon Rhodes and John Goerzen's _Foundations of
  * `print` as function
  * string formatting with `<str>.format()`
  * sockets now send and receive strings as bytestring:
-   * send: `'content` => `b'content'`
+   * send: `'content'` => `b'content'`
    * after receiving: `repr(data)` => `data.encode('utf-8')`
  * some modules have changed:
    * `urllib2` => `urllib`, and the new module is organized differently 
