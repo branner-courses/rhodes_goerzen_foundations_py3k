@@ -19,4 +19,17 @@ Python 3 versions of code from Brandon Rhodes and John Goerzen's _Foundations of
 
  * Listing 9–1. `verbose_handler.py`: An HTTP Request and Response that Prints All Headers
 
+### Changes from Python2 to Python3
+
+ * `print >>sys.stderr, <str>` => `sys.stderr.write(<str>)`
+ * `print` as function
+ * string formatting with `<str>.format()`
+ * sockets now send and receive strings as bytestring:
+   * send: `'content` => `b'content'`
+   * after receiving: `repr(data)` => `data.encode('utf-8')`
+ * some modules have changed:
+   * `urllib2` => `urllib`, and the new module is organized differently 
+   * `io`: `io.StringIO` => `io.BytesIO`
+   * `pydns` => `py3dns`
+
 [end]
