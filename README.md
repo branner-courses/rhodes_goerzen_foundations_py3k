@@ -29,7 +29,7 @@ Python 3 versions of code from Brandon Rhodes and John Goerzen's _Foundations of
    * after receiving: `repr(data)` => `data.encode('utf-8')`
  * some modules have changed:
    * `urllib2` => `urllib`, and the new module is organized differently 
-   * `io`: `io.StringIO` => `io.BytesIO`
+   * `io`: `io.StringIO` => `io.BytesIO` because we are dealing with bytestring now
    * `pydns` => `py3dns`
 
 [end]
