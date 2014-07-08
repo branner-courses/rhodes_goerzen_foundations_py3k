@@ -15,7 +15,7 @@ Python 3 versions of code from Brandon Rhodes and John Goerzen's _Foundations of
  * Listing 4–3.`dns_basic.py`:  A Simple DNS Query Doing Its Own Recursion
  * Listing 4–4. `dns_mx.py`: Resolving an E-mail Domain Name
  * Listing 5–1. `streamer.py`: Sending a Single Stream of Data
-
+ * Listing 5–2. `blocks.py`: Sending Blocks of Data
 
  ----
 
@@ -27,8 +27,10 @@ Python 3 versions of code from Brandon Rhodes and John Goerzen's _Foundations of
  * `print` as function
  * string formatting with `<str>.format()`
  * sockets now send and receive strings as bytestring:
-   * send: `'content'` => `b'content'`
-   * after receiving: `repr(data)` => `data.encode('utf-8')`
+   * send byte string: `'content'` => `b'content'`
+   * convert `str` variable to `bytes`: `message` => `bytes(message, 'utf-8')`
+   * after receiving, convert to str: `more` => `str(more, 'utf-8')`
+   * after receiving, for printing: `repr(data)` => `data.encode('utf-8')`
  * some modules have changed:
    * `urllib2` => `urllib`, and the new module is organized differently 
    * `io`: `io.StringIO` => `io.BytesIO` because we are dealing with bytestring now
