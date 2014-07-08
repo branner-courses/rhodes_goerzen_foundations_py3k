@@ -23,7 +23,7 @@ if sys.argv[1:] == ['server']:
         more = sc.recv(8192) # arbitrary value of 8k
         if not more: # socket has closed when recv() returns ''
             break
-        message += more
+        message += str(more, 'utf-8')
     print('Done receiving the message; it says:\n{}'.format(message))
     sc.close()
     s.close()
@@ -31,9 +31,9 @@ if sys.argv[1:] == ['server']:
 elif sys.argv[1:] == ['client']:
     s.connect((HOST, PORT))
     s.shutdown(socket.SHUT_RD)
-    s.sendall('Beautiful is better than ugly.\n')
-    s.sendall('Explicit is better than implicit.\n')
-    s.sendall('Simple is better than complex.\n')
+    s.sendall(b'Beautiful is better than ugly.\n')
+    s.sendall(b'Explicit is better than implicit.\n')
+    s.sendall(b'Simple is better than complex.\n')
     s.close()
 
 else:
