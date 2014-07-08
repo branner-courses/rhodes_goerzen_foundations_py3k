@@ -1,0 +1,5 @@
+*~
+*.swp
+*.db
+*.DS_Store
+*v_env*
