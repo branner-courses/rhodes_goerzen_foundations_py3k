@@ -15,20 +15,20 @@ def recvall(sock, length):
     data = ''
     while len(data) < length:
         more = sock.recv(length - len(data))
+        more = str(more, 'utf-8')
         if not more:
             raise EOFError('socket closed {} bytes into a {}-byte message'.
-                    frmat(len(data), length))
+                    format(len(data), length))
         data += more
-    return data
+    return bytes(data, 'utf-8')
 
 def get(sock):
-    lendata = recvall(sock, format.size)
+    lendata = recvall(sock, frmat.size)
     (length,) = frmat.unpack(lendata)
     return recvall(sock, length)
 
 def put(sock, message):
     sock.send(frmat.pack(len(message)) + message)
-
 
 if sys.argv[1:] == ['server']:
     s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -42,7 +42,7 @@ if sys.argv[1:] == ['server']:
         message = get(sc)
         if not message:
             break
-        print('Message says: {}'.format(message.encode('utf-8')))
+        print('Message says: {}'.format(str(message, 'utf-8')))
     sc.close()
     s.close()
 
@@ -52,7 +52,7 @@ elif sys.argv[1:] == ['client']:
     put(s, b'Beautiful is better than ugly.\n')
     put(s, b'Explicit is better than implicit.\n')
     put(s, b'Simple is better than complex.\n')
-    put(s, '')
+    put(s, b'')
     s.close()
 
 else:
