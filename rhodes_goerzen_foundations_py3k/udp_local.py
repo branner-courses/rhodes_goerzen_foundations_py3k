@@ -2,7 +2,7 @@
 # Foundations of Python Network Programming - Chapter 2
 # udp_local.py
 # UDP client and server on localhost
-# Converted to Python3 by David Branner, 20140706, works.
+# Converted to Python3 by David Branner, 20140708, works.
 
 import socket, sys
 
