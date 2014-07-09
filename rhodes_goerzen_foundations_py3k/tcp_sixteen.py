@@ -1,7 +1,8 @@
 #!/usr/bin/env python
-# Rhodes and Goerzen, Foundations of Python Network Programming, tcp_sixteen.py
+# Rhodes and Goerzen, Foundations of Python Network Programming, Chapter 3
+# tcp_sixteen.py
 # Simple TCP client and server that send and receive 16 octets
-# Converted to Python3 by David Branner, 20140703, works.
+# Converted to Python3 by David Branner, 20140708, works.
 
 import socket, sys
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -12,7 +13,7 @@ PORT = 1060
 def recv_all(sock, length):
     data = ''
     while len(data) < length:
-        more = sock.recv(length - len(data)).decode('utf-8')
+        more = str(sock.recv(length - len(data)), 'utf-8')
         if not more:
             raise EOFError('socket closed {} bytes into a {}-byte message'.
                     format(len(data), length))
