@@ -2,7 +2,7 @@
 # Rhodes and Goerzen, Foundations of Python Network Programming, Chapter 3
 # tcp_deadlock.py
 # TCP client and server that leave too much data waiting
-# Converted to Python3 by David Branner, 20140708, works.
+# Converted to Python3 by David Branner, 20140709, works.
 
 import socket, sys
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

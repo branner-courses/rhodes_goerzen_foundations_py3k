@@ -2,7 +2,7 @@
 # Rhodes and Goerzen, Foundations of Python Network Programming - Chapter 4
 # www_ping.py
 # Find the WWW service of an arbitrary host using getaddrinfo().
-# Converted to Python3 by David Branner, 20140706, works.
+# Converted to Python3 by David Branner, 20140709, works.
 
 import socket, sys
 
@@ -27,4 +27,4 @@ try:
 except socket.error as e:
     print('Network failure: {}'.format(e.args[1]))
 else:
-    print('Success: host {} is listening on port 80'.format(info[3]))
+    print('Success: host {} is listening on port 80\n'.format(info[3]))

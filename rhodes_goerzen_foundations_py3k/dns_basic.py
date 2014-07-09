@@ -2,12 +2,12 @@
 # Rhodes and Goerzen, Foundations of Python Network Programming - Chapter 4
 # dns_basic.py
 # Basic DNS query
-# Converted to Python3 by David Branner, 20140706, works.
+# Converted to Python3 by David Branner, 20140709, works.
 
 import sys, DNS
 
 if len(sys.argv) != 2:
-    sys.stderr.write('usage: dns_basic.py <hostname>')
+    sys.stderr.write('usage: dns_basic.py <hostname>\n')
     sys.exit(2)
 DNS.DiscoverNameServers()
 request = DNS.Request()

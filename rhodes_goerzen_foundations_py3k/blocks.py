@@ -2,7 +2,7 @@
 # Rhodes and Goerzen, Foundations of Python Network Programming - Chapter 5
 # blocks.py
 # Sending data one block at a time.
-# Converted to Python3 by David Branner, 20140708.
+# Converted to Python3 by David Branner, 20140709, works.
 
 import socket, struct, sys
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -56,4 +56,4 @@ elif sys.argv[1:] == ['client']:
     s.close()
 
 else:
-    sys.stederr.write('usage: blocks.py server|client [host]')
+    sys.stederr.write('usage: blocks.py server|client [host]\n')

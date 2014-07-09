@@ -2,12 +2,12 @@
 # Rhodes and Goerzen, Foundations of Python Network Programming - Chapter 4
 # forward_reverse.py
 # Checking whether a hostname works both forward and backward.
-# Converted to Python3 by David Branner, 20140706, works.
+# Converted to Python3 by David Branner, 20140709, works.
 
 import socket, sys
 
 if len(sys.argv) != 2:
-    sys.stderr.write('usage: forward_reverse.py <hostname>')
+    sys.stderr.write('usage: forward_reverse.py <hostname>\n')
     sys.exit(2)
 hostname = sys.argv[1]
 try:
