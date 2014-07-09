@@ -30,7 +30,6 @@ Python 3 versions of code from Brandon Rhodes and John Goerzen's _Foundations of
    * send byte string: `'content'` => `b'content'`
    * convert `str` variable to `bytes`: `message` => `bytes(message, 'utf-8')`
    * after receiving, convert to str: `more` => `str(more, 'utf-8')`
-   * after receiving, for printing: `repr(data)` => `data.encode('utf-8')`
  * some modules have changed:
    * `urllib2` => `urllib`, and the new module is organized differently 
    * `io`: `io.StringIO` => `io.BytesIO` because we are dealing with bytestring now
