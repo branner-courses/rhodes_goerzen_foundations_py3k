@@ -2,7 +2,7 @@
 # Rhodes and Goerzen, Foundations of Python Network Programming - Chapter 2
 # udp_remote.py
 # UDP client and server for talking over the network
-# Converted to Python3 by David Branner, 20140629, works.
+# Converted to Python3 by David Branner, 20140708, works.
 
 import random, socket, sys
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -18,7 +18,7 @@ if 2 <= len(sys.argv) <= 3 and sys.argv[1] == 'server':
         data, address = s.recvfrom(MAX)
         if random.randint(0, 1):
             print('The client at {} says {}'.
-                    format(address, data.decode('utf-8')))
+                    format(address, str(data, 'utf-8')))
             s.sendto(bytes('Your data was {} bytes.'.format(len(data)),
                 'utf-8'), address)
         else:
@@ -45,7 +45,7 @@ elif len(sys.argv) == 3 and sys.argv[1] == 'client':
             continue
         else:
             break # we are done, and can stop looping
-    print('The server says: {}'.format(data.decode('utf-8')))
+    print('The server says: {}'.format(str(data, 'utf-8')))
 else:
     sys.stderr.write('''usage: udp_remote.py server [ <interface> ]\n'''
             '''   or: udp_remote.py client <host>\n''')
