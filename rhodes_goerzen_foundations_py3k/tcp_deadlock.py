@@ -51,7 +51,7 @@ elif len(sys.argv) == 3 and sys.argv[1] == 'client' and sys.argv[2].isdigit():
         data = s.recv(42)
         if not received:
             print('The first data received says {}.'.
-                    format(data.decode('utf-8')))
+                    format(str(data, 'utf-8')))
         received += len(data)
         if not data:
             break
