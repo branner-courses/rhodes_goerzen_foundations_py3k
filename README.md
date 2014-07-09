@@ -29,7 +29,7 @@ Python 3 versions of code from Brandon Rhodes and John Goerzen's _Foundations of
  * sockets now send and receive strings as bytestring:
    * send byte string: `'content'` => `b'content'`
    * convert `str` variable to `bytes`: `message` => `bytes(message, 'utf-8')`
-   * after receiving, convert to str: `more` => `str(more, 'utf-8')`
+   * convert `bytes` variable to `str`: `more` => `str(more, 'utf-8')`
  * some modules have changed:
    * `urllib2` => `urllib`, and the new module is organized differently 
    * `io`: `io.StringIO` => `io.BytesIO` because we are dealing with bytestring now
