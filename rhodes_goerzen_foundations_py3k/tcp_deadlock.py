@@ -1,7 +1,8 @@
 #!/usr/bin/env python
-# Rhodes and Goerzen, Foundations of Python Network Programming, tcp_deadlock.py
+# Rhodes and Goerzen, Foundations of Python Network Programming, Chapter 3
+# tcp_deadlock.py
 # TCP client and server that leave too much data waiting
-# Converted to Python3 by David Branner, 20140703
+# Converted to Python3 by David Branner, 20140708
 
 import socket, sys
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -20,7 +21,7 @@ if sys.argv[1:] == ['server']:
                 format(sockname))
         n = 0
         while True:
-            message = sc.recv(1024).decode('utf-8')
+            message = str(sc.recv(1024), 'utf-8')
             if not message:
                 break
             sc.sendall(message.upper().encode())
