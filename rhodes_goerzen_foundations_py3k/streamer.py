@@ -37,4 +37,4 @@ elif sys.argv[1:] == ['client']:
     s.close()
 
 else:
-    sys.stederr.write('usage: streamer.py server|client [host]\n')
+    sys.stderr.write('usage: streamer.py server|client [host]\n')
