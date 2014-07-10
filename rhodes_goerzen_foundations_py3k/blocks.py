@@ -56,4 +56,4 @@ elif sys.argv[1:] == ['client']:
     s.close()
 
 else:
-    sys.stederr.write('usage: blocks.py server|client [host]\n')
+    sys.stderr.write('usage: blocks.py server|client [host]\n')
