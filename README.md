@@ -34,5 +34,6 @@ Python 3 versions of code from Brandon Rhodes and John Goerzen's _Foundations of
    * `urllib2` => `urllib`, and the new module is organized differently 
    * `io`: `io.StringIO` => `io.BytesIO` because we are dealing with bytestring now
    * `pydns` => `py3dns`
+   * `socket.error` => `OSError`
 
 [end]

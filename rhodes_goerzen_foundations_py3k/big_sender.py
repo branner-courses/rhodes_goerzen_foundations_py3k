@@ -21,7 +21,7 @@ s.connect((hostname, PORT))
 s.setsockopt(socket.IPPROTO_IP, IN.IP_MTU_DISCOVER, IN.IP_PMTUDISC_DO)
 try:
     s.send(b'#' * 65000)
-except socket.error:
+except OSError:
     print('The message did not make it')
     option = getattr(IN, 'IP_MTU', 14) # constant taken from <linux/in.h>
     print('MTU: {}\n'.format(s.getsockopt(socket.IPPROTO_IP, option)))

@@ -24,7 +24,7 @@ address = info[4]
 s = socket.socket(*socket_args)
 try:
     s.connect(address)
-except socket.error as e:
+except OSError as e:
     print('Network failure: {}'.format(e.args[1]))
 else:
     print('Success: host {} is listening on port 80\n'.format(info[3]))
