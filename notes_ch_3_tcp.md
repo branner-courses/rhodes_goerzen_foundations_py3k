@@ -2,7 +2,7 @@
 
 Second edition.
 
-TCP is used for "stream" sockets.
+TCP is used for "stream" sockets, split into packets automatically.
 
 ### How TCP works
 
