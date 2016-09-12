@@ -10,7 +10,7 @@ TCP is used for "stream" sockets, split into packets automatically.
  
  * Every packet has a sequence number representing the total number of bytes sent up to then. The initial number is ideally random, so that it is harder for attackers to forge packets. (p. 35)
 
- * Multiple packets can be sent before acknowledgement from the receiver. Term:
+ * Multiple packets can be sent before acknowledgement from the receiver. Terms:
  
    * **window**: amount of unacknowledged data permitted at any moment
    * **flow control**: adjustment of window by receiver, if input buffer is full or network appears noisy
@@ -42,6 +42,8 @@ TCP is used for "stream" sockets, split into packets automatically.
 
 ### One socket per conversation
 
+Basic sequence of behaviors:
+
  * Server: `socket.socket()`, `setsockopt()`, `bind()`, `listen()`, `accept()`, [`recv()`, `sendall()`], `close()`
  * Client: `socket.socket()`, `connect()`, `sendall()`, `recv()`, `close()`
 
@@ -62,7 +64,7 @@ TCP is used for "stream" sockets, split into packets automatically.
 ### Closed Connections, Half-Open Connections
 
  * When a socket is closed, it returns an empty string. (Not true for non-blocking sockets.)
- * Socket can be half-closed with `shutdown()`; no further reading, but replies are still possible. This is often used to create a uni-directional socket.
+ * Socket can be half-closed with `shutdown()`; no further reading, but replies are still possible. This is sometimes used to create a uni-directional socket.
 
 ## Using TCP Streams Like Files
 
@@ -79,8 +81,8 @@ TCP is used for "stream" sockets, split into packets automatically.
 
 ### Terms
 
- * datagram: "application-level block for transmitted data" (p. 20)
- * network interface: hardware-software boundary; here, the IP address (including or without port)
- * deadlock: the filling of a socket with more data than can ever be read, so that it hangs forever
+ * **datagram**: "application-level block for transmitted data" (p. 20)
+ * **network interface*: hardware-software boundary; here, the IP address (including or without port)
+ * **deadlock**: the filling of a socket with more data than can ever be read, so that it hangs forever
 
 [end]

@@ -6,7 +6,7 @@ TCP is used for "stream" sockets, split into packets automatically.
 
 ### The Building Blocks: Stacks and Libraries
 
- * protocol stack: "simpler network services are used as the foundation on which to build more sophisticated services"
+ * **protocol stack**: "simpler network services are used as the foundation on which to build more sophisticated services"
  * `pygeocoder`: "clean interface to Google’s geocoding features" (not of Google origin). This library is "the top layer of a network stack".
 
 ### Application Layers
@@ -25,13 +25,13 @@ TCP is used for "stream" sockets, split into packets automatically.
 
  * Example of a stack, each layer of which uses the tools of the next layer down:
 
-   * Top-level was an API.
+   * Top-level is an API.
    * URLs name documents that can be retrieved using HTTP.
    * HTTP supports document-oriented commands such as GET using raw TCP/IP sockets.
    * TCP/IP sockets know how only to send and receive byte strings.
 
- * Python offers very complete tools for multiple layers of this stack.
- * Lower-level coding tends to be uglier and risks more errors.
+ * Python offers very complete tools wrapping multiple layers of this stack.
+ * Explicitly lower-level coding tends to be uglier and risks more errors.
  * Higher-level protocols work by hiding lower-level layers. (Consider: does a higher-level library correctly hide errors at lower levels?)
  * Protocols lower than `socket` are:
  
@@ -46,7 +46,7 @@ TCP is used for "stream" sockets, split into packets automatically.
 
 ### The Internet Protocol
 
- * packet: byte string, transmitted as a single unit between network devices
+ * **packet**: byte string, transmitted as a single unit between network devices
  * necessary properties of a packet: byte-string data, an address
 
 ### IP Addresses
@@ -58,8 +58,8 @@ TCP is used for "stream" sockets, split into packets automatically.
 
 ### Routing
 
- * gateway machine: connects local subnet to the rest of the Internet
- * mask: integer (multiple of 8) indicating how many of an IP address's most significant bits have to match to make a host belong to that subnet. E.g., `127.0.0.0/8` (represents `127.*.*.*`); `192.168.0.0/16` (represents `192.168.*.*`), etc.
+ * **gateway machine**: connects local subnet to the rest of the Internet
+ * **mask**: integer (multiple of 8) indicating how many of an IP address's most significant bits have to match to make a host belong to that subnet. E.g., `127.0.0.0/8` (represents `127.*.*.*`); `192.168.0.0/16` (represents `192.168.*.*`), etc.
 
 ### Packet Fragmentation
 
